@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        short MAX_SPEED = 250;
+        short MIN_SPEED = 1;
         Scanner scanner = new Scanner(System.in);
         ArrayList<Car> cars = new ArrayList<>();
         System.out.println("Нужно ввести 3 машины и их скорости.");
@@ -16,7 +18,7 @@ public class Main {
                 }
             }
             int speed = -1;
-            while (speed < 1 || speed > 250) {
+            while (speed < MIN_SPEED || speed > MAX_SPEED) {
                 System.out.println("Введите скорость машины " + (i + 1) + " в диапазоне 1-250:");
                 speed = scanner.nextInt();
             }
